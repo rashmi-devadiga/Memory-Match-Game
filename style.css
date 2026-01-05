@@ -1,0 +1,299 @@
+/* BACKGROUND (IMAGE) */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("images/imgb3.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GLASS CARD UI */
+.card-ui {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+  padding: 35px 45px;
+  border-radius: 28px;
+  width: 430px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.card-ui h1 {
+  margin-bottom: 10px;
+  color: #3a3a3a;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 17px;
+}
+
+/* PLAYER BUTTONS */
+.player-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.player-buttons button {
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff9f43, #ff7f50);
+  color: white;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.player-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+/* ACTIVE PLAYER BUTTON (on click) */
+.player-buttons button.active {
+  background: #ffffff;
+  color: #ff7f50;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* NAME INPUTS */
+.name-inputs input {
+  width: 92%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* START BUTTON */
+.start-btn {
+  margin-top: 18px;
+  padding: 14px 45px;
+  font-size: 20px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(to right, #9be15d, #00e3ae);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+/* STATUS BAR (TOP GAME CARD) */
+.status-card {
+  width: 520px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+  padding: 18px 25px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+.status-left {
+  width: 100%;
+  text-align: center;        /* ✅ center text */
+}
+
+.status-left h2 {
+  margin: 0;
+  color: #333;
+}
+
+.status-left p {
+  margin: 5px 0;
+  color: #444;
+}
+
+/* TIMER */
+#timer {
+  display: block;
+  margin: 12px auto 0 auto;   /* ✅ CENTER HORIZONTALLY */
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+  background: rgba(255,255,255,0.7);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* GAME BOARD */
+.game-board {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* GAME CARDS */
+.card {
+  width: 78px;
+  height: 78px;
+  border-radius: 18px;
+  background: url("images/imgb2.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+  overflow: hidden; /* IMPORTANT */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* IMAGE FULLY COVERS CARD */
+  border-radius: 18px;
+  opacity: 0;            /* hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.card.flip img,
+.card.matched img {
+  opacity: 1;
+}
+
+.card.matched {
+  pointer-events: none;
+}
+
+/* Matched cards */
+.card.matched {
+  background: linear-gradient(to right, #b7f8db, #50c878);
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .card-ui,
+  .status-card {
+    width: 90%;
+  }
+}
+
+/* CARD BACK IMAGE */
+.card {
+  background: url("images/imgb2.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/* FIX INPUT NOT TYPING */
+.name-inputs,
+.name-inputs input {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Extra safety */
+.card-ui {
+  pointer-events: auto;
+}
+
+/* SCORE MODAL OVERLAY */
+.score-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* SCORE CARD (GLASS STYLE) */
+.score-card {
+  width: 360px;
+  padding: 25px 30px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  text-align: left;
+}
+
+.score-card h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+/* Score rows */
+.score-row {
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+/* OK button */
+.score-card button {
+  margin: 18px auto 0;
+  display: block;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(to right, #ff9f43, #ff7f50);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Scoreboard buttons */
+.score-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ok-btn {
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  background: #ddd;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.restart-btn {
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(to right, #9be15d, #00e3ae);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
