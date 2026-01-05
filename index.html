@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+  <!-- PLAYER SELECTION CARD -->
+  <div class="card-ui" id="playerSelect">
+    <h1>Memory Match🍇</h1>
+
+    <p class="subtitle"><b>Select number of players:</b></p>
+
+    <div id="playerButtons" class="player-buttons">
+      <button class="player-btn" onclick="selectPlayers(1, this)">1 Player</button>
+      <button class="player-btn" onclick="selectPlayers(2, this)">2 Players</button>
+      <button class="player-btn" onclick="selectPlayers(3, this)">3 Players</button>
+      <button class="player-btn" onclick="selectPlayers(4, this)">4 Players</button>
+    </div>
+
+    <div id="nameInputs" class="name-inputs"></div>
+
+    <button onclick="startGame()" id="startBtn" class="start-btn" style="display:none;">
+      Start Game
+    </button>
+  </div>
+
+  <!-- STATUS CARD (IMAGE MATCHED STRUCTURE) -->
+  <div id="status" class="status-card" style="display:none;">
+
+    <div class="status-left">
+      <h2>Memory Match 🍇</h2>
+
+      <!-- UPDATED BY JS -->
+      <p id="turn"></p>
+
+      <!-- UPDATED BY JS -->
+      <p id="scores"></p>
+
+      
+    </div>
+
+    <!-- TIMER (UPDATED BY JS) -->
+    <div id="timer">3</div>
+
+  </div>
+
+  <!-- GAME BOARD -->
+  <div class="game-board"></div>
+
+</div>
+
+<!-- FINAL SCORE MODAL -->
+<div id="scoreModal" class="score-modal" style="display:none;">
+  <div class="score-card">
+    <h2>Final Scoreboard 🍇</h2>
+    <div id="scoreContent"></div>
+
+    <div class="score-buttons">
+      <button class="ok-btn" onclick="goToPlayerSelect()">OK</button>
+      <button class="restart-btn" onclick="restartSamePlayers()">Restart</button>
+    </div>
+  </div>
+</div>
+
+<!-- JS FILE -->
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
