@@ -118,11 +118,9 @@ memory-match-game/
 ---
 
 ## Author
-
-**Rashmi Devadiga**
-Bachelor of Computer Applications Graduate
-[LinkedIn](https://linkedin.com/in/rashmidevadiga) |
-[GitHub](https://github.com/rashmi-devadiga)
+**Rashmi Devadiga**  
+Bachelor of Computer Applications Graduate  
+[LinkedIn](https://www.linkedin.com/in/your-link) | [GitHub](https://github.com/your-username)
 
 ---
 
