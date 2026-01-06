@@ -38,11 +38,7 @@ The game supports **1–4 players**, turn-based gameplay, a countdown timer, and
 
 ## Screenshots
 
-<p align="center">
-  <img src="screenshots/player-select.png" width="30%">
-  <img src="screenshots/gameplay.png" width="30%">
-  <img src="screenshots/scoreboard.png" width="30%">
-</p>
+
 
 ---
 
