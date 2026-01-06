@@ -18,7 +18,7 @@ The game supports **1–4 players**, turn-based gameplay, a countdown timer, and
 5. [Project Structure](#project-structure)  
 6. [Technologies Used](#technologies-used)  
 7. [Future Enhancements](#future-enhancements)  
-
+8. [Author](#author)  
 ---
 
 ## Features
