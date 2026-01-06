@@ -62,7 +62,7 @@ The game supports **1–4 players**, turn-based gameplay, a countdown timer, and
 
 - `imgb3.jpg` → Game background image
 - `imgb2.jpg` → Card back (hidden state)
-- `img1.jpg` – `img35.jpg` → Card front images
+- `img1.png` – `img35.png` → Card front images
 
 > Image filenames must exactly match those used in CSS and JavaScript.
 
