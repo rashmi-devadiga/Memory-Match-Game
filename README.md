@@ -83,7 +83,7 @@ memory-match-game/
 │   ├── ...
 │   └── img35.png
 │
-├── screenshots/            # Game screenshots for README
+├── screenshots/            # Game screenshots
 │   ├── gameplay.png
 │   ├── scoreboard.png
 │   └── player-select.png
@@ -96,6 +96,8 @@ memory-match-game/
     ├── navigation.js       # Modals, restart, navigation logic
     └── main.js             # App entry point
 ```
+
+---
 
 ## Technologies Used
 
@@ -118,5 +120,9 @@ memory-match-game/
 ## Author
 
 **Rashmi Devadiga**
-BCA Graduate
+Bachelor of Computer Applications Graduate
+[LinkedIn](https://linkedin.com/in/rashmidevadiga) |
+[GitHub](https://github.com/rashmi-devadiga)
+
+---
 
