@@ -16,21 +16,18 @@ The game supports **1–4 players**, turn-based gameplay, a countdown timer, and
 3. [How to Play](#how-to-play)  
 4. [Images Used](#images-used)  
 5. [Project Structure](#project-structure)  
-6. [Technologies Used](#technologies-used)  
+6. [Built With](#built-with)  
 7. [Future Enhancements](#future-enhancements)  
 8. [Author](#author)  
 ---
 
 ## Features
 
-- Supports **1 to 4 players**
-- Custom player names
+- Supports **1 to 4 players** & custom player names
 - Flip cards to find matching pairs
-- Turn-based timer system
-- Automatic turn switching on mismatch or timeout
-- Real-time score tracking
+- Turn-based gameplay with automatic switching on mismatch or timeout
+- Real-time score tracking 
 - Final scoreboard with player rankings
-- Restart game with the same players
 - Glassmorphism UI design
 - Dynamic grid layout based on number of cards
 
@@ -76,39 +73,34 @@ The game supports **1–4 players**, turn-based gameplay, a countdown timer, and
 ```md
 memory-match-game/
 │
-├── index.html              # Main HTML file
-├── style.css               # Game styling (UI, layout, animations)
+├── index.html              
+├── style.css               
 │
-├── images/                 # Game images
-│   ├── imgb3.jpg           # Background image
-│   ├── imgb2.jpg           # Card back image
-│   ├── img1.png            # Card front images
+├── images/                
+│   ├── imgb3.jpg           
+│   ├── imgb2.jpg          
+│   ├── img1.png            
 │   ├── img2.png
 │   ├── ...
-│   └── img35.png
+│   └── img35.png            
 │
-├── screenshots/            # Game screenshots
-│   ├── gameplay.png
-│   ├── scoreboard.png
-│   └── player-select.png
-│
-└── js/                     # JavaScript files
-    ├── data.js             # Images, constants, global state
-    ├── game.js             # Core game logic
-    ├── ui.js               # DOM updates & UI helpers
-    ├── timer.js            # Turn timer logic
-    ├── navigation.js       # Modals, restart, navigation logic
-    └── main.js             # App entry point
+└── js/                     
+    ├── data.js             
+    ├── game.js             
+    ├── ui.js               
+    ├── timer.js            
+    ├── navigation.js       
+    └── main.js            
 ```
 
 ---
 
-## Technologies Used
+## Built With
 
 - **HTML5**  
 - **CSS3** 
-- **JavaScript (Vanilla JS)**  
-
+- **JavaScript (Vanilla JS)**
+ 
 ---
 
 ## Future Enhancements
